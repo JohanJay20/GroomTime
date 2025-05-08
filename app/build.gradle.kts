@@ -60,7 +60,7 @@ dependencies {
     implementation("com.google.firebase:firebase-database")
     
     // Google Sign-In
-    implementation("com.google.android.gms:play-services-auth:20.7.0")
+    implementation("com.google.android.gms:play-services-auth:21.0.0")
 
     // SafetyNet reCAPTCHA
     implementation("com.google.android.gms:play-services-safetynet:18.0.1")

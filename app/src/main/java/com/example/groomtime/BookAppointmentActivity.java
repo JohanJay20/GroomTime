@@ -13,7 +13,6 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.example.groomtime.models.Appointment;
 import com.example.groomtime.services.AppointmentService;
-import com.example.groomtime.services.RecaptchaService;
 import java.util.Calendar;
 import java.util.Date;
 
@@ -24,7 +23,6 @@ public class BookAppointmentActivity extends AppCompatActivity {
     private TextInputEditText notesInput;
     private MaterialButton bookButton;
     private AppointmentService appointmentService;
-    private RecaptchaService recaptchaService;
     private Calendar selectedDateTime;
 
     private final String[] serviceTypes = {
@@ -51,7 +49,6 @@ public class BookAppointmentActivity extends AppCompatActivity {
 
         // Initialize services
         appointmentService = new AppointmentService();
-        recaptchaService = new RecaptchaService();
         selectedDateTime = Calendar.getInstance();
 
         // Setup service type dropdown
@@ -109,29 +106,10 @@ public class BookAppointmentActivity extends AppCompatActivity {
 
         // Show loading state
         bookButton.setEnabled(false);
-        bookButton.setText("Verifying...");
+        bookButton.setText("Booking...");
 
-        // Verify reCAPTCHA
-        recaptchaService.verifyRecaptcha(this, new RecaptchaService.RecaptchaCallback() {
-            @Override
-            public void onSuccess() {
-                // reCAPTCHA verification successful, proceed with booking
-                runOnUiThread(() -> {
-                    bookButton.setText("Booking...");
-                    bookAppointment();
-                });
-            }
-
-            @Override
-            public void onError(String errorMessage) {
-                runOnUiThread(() -> {
-                    Toast.makeText(BookAppointmentActivity.this,
-                        "Verification failed: " + errorMessage, Toast.LENGTH_LONG).show();
-                    bookButton.setEnabled(true);
-                    bookButton.setText("Book Appointment");
-                });
-            }
-        });
+        // Proceed directly with booking
+        bookAppointment();
     }
 
     private boolean validateInput() {
