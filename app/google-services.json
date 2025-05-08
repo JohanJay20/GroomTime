@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "829948657954",
+    "project_id": "groom-time-dbed0",
+    "storage_bucket": "groom-time-dbed0.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:829948657954:android:372f2993be0ff9a50f257b",
+        "android_client_info": {
+          "package_name": "com.example.groomtime"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "829948657954-md945v9f18tv87g7f2ds8fte4jmg8uvn.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.groomtime",
+            "certificate_hash": "b2722f62a7f63dcbb193125313184df5f2214541"
+          }
+        },
+        {
+          "client_id": "829948657954-f04gdcn38edms85vd95irs870lufrlhp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDaNcOJeVD5SllCXU0B9VrVngOwWlcOSpQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "829948657954-f04gdcn38edms85vd95irs870lufrlhp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">GroomTime</string>
+    <string name="default_web_client_id">YOUR-WEB-CLIENT-ID.apps.googleusercontent.com</string>
+
+</resources>
